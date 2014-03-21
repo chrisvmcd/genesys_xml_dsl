@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CfgData xmlns="http://www.genesyslab.com/cs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
+
+  <CfgReference>
+    <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1" />
+    <CfgTenantRef id="CfgTenant101" name="Resources" />
+    <CfgFolderRef id="Hostfolder" name="Hosts" ownerDBID="Environment" />
+	
+    <CfgServerRef id="SrvrCFG_SCS_01A" ownerDBID="Environment" name="CFG_SCS_01A" />
+    <CfgServerRef id="SrvrCFG_SCS_02A" ownerDBID="Environment" name="CFG_SCS_02A" />
+
+    <CfgFolderRef id="MediaFolder" name="Media" ownerDBID="Environment" />
+    <CfgFolderRef id="BSkyBFolder" name="BSkyB" ownerDBID="Environment" />
+
+    <CfgFolderRef id="SwitchOfficefolder" name="Switching Offices" ownerDBID="Environment" />
+    <CfgFolderRef id="SwitchFolder" name="Switches" ownerDBID="CfgTenant101" />
+	
+  </CfgReference>
+  
+  <CfgCreate>
+  
+    <!--Create Host Folder-->
+    <CfgFolder id="D6Hostsfolder" name="D6_AIR" folderDBID="Hostfolder" type="10" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+	  </CfgFolder>
+	
+    <!-- Create Switching Office Folders -->
+    <CfgFolder id="PSIPSOFolder" name="PSIP" folderDBID="SwitchOfficefolder" type="11" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    
+    <!-- Create Application Folders for PSIP -->
+    <!--
+    
+      In the Applications\Media\ folder, create:
+      
+      PSIP
+        LIV
+        DUN
+        P01
+        P02
+        P03
+        P04
+        S01
+        S02
+        S03
+        S04
+       
+    -->
+	  <CfgFolder id="PSIPFolder" name="PSIP" folderDBID="MediaFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="LIVfolder" name="LIV" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="DUNfolder" name="DUN" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="P01folder" name="P01" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="P02folder" name="P02" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="P03folder" name="P03" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="P04folder" name="P04" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="S01folder" name="S01" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="S02folder" name="S02" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="S03folder" name="S03" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+    <CfgFolder id="S04folder" name="S04" folderDBID="PSIPFolder" type="9" state="1" folderClass="1" isAuto="1">
+      <ownerID>
+        <CfgTenantOwnerShortcut linkDBID="Environment" />
+      </ownerID>
+    </CfgFolder>
+
+    <!-- Create Switching Offices -->
+    <CfgPhysicalSwitch id="Create_SO_LIV" name="D6_SO_LIV" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_DUN" name="D6_SO_DUN" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_P01" name="D6_SO_P01" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_P02" name="D6_SO_P02" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_P03" name="D6_SO_P03" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_P04" name="D6_SO_P04" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_S01" name="D6_SO_S01" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_S02" name="D6_SO_S02" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_S03" name="D6_SO_S03" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <CfgPhysicalSwitch id="Create_SO_S04" name="D6_SO_S04" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    <!--
+      LIV, DUN and S01 exist already.
+      <CfgPhysicalSwitch id="Create_SO_S01" name="SO_S01" type="72" state="1" ownerDBID="Environment" folderDBID="PSIPSOFolder" />
+    -->
+    
+    <!--Create Hosts-->
+    
+    <!-- PSIP Hosts -->
+    <CfgHost id="CfgHostWF2RT25A" name="WF2RT25A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT25B" name="WF2RT25B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT26A" name="WF2RT26A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT26B" name="WF2RT26B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT27A" name="WF2RT27A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT27B" name="WF2RT27B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT28A" name="WF2RT28A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT28B" name="WF2RT28B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT29A" name="WF2RT29A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT29B" name="WF2RT29B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT30A" name="WF2RT30A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT30B" name="WF2RT30B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT31A" name="WF2RT31A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT31B" name="WF2RT31B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT32A" name="WF2RT32A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT32B" name="WF2RT32B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT33A" name="WF2RT33A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT33B" name="WF2RT33B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT34A" name="WF2RT34A" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_01A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+    <CfgHost id="CfgHostWF2RT34B" name="WF2RT34B" OStype="15" OSversion="R2 SP2" type="1" state="1" LCAPort="4999" ownerDBID="Environment" folderDBID="D6Hostsfolder" SCSDBID="SrvrCFG_SCS_02A">
+      <userProperties>
+        <list_pair key="rdm">
+          <str_pair key="port" value="5000" />
+        </list_pair>
+      </userProperties>
+    </CfgHost>
+  </CfgCreate>
+</CfgData>

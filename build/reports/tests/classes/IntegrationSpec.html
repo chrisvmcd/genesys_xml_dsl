@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Test results - Class IntegrationSpec</title>
+<link href="css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script src="js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class IntegrationSpec</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; IntegrationSpec</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.362s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="should construct basic xml"></a>
+<h3 class="failures">should construct basic xml</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+compareXml(expected, actual)
+|          |         |
+false      |         CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[CfgApplication[attributes={id=CfgApplication1174, name=Gromit, type=22, version=8.1, state=1, appPrototypeDBID=CfgAppPrototype202, ownerDBID=CfgProviderTenant1, folderDBID=CfgFolder2787}; value=[tenantDBIDs[attributes={}; value=[CfgAppTenant[attributes={linkDBID=CfgTenant101}; value=[]]]]]]]]]]
+           CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[CfgApplication[attributes={id=CfgApplication1174, name=Gromit, type=22, version=8.1, state=1, appPrototypeDBID=CfgAppPrototype202, ownerDBID=CfgProviderTenant1, folderDBID=CfgFolder2787}; value=[tenantDBIDs[attributes={}; value=[CfgAppTenant[attributes={linkDBID=CfgTenant101}; value=[]]]], options[attributes={}; value=[list_pair[attributes={key=properties}; value=[str_pair[attributes={key=clws.url, value=https://test.com}; value=[]], str_pair[attributes={key=logging.level, value=DEBUG}; value=[]]]]]]]]]]]]
+
+	at IntegrationSpec.should construct basic xml(IntegrationSpec.groovy:25)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">should construct basic xml</td>
+<td>0.362s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>EXPECTED:
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;CfgData xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.genesyslab.com/cs hta/cfg_update.xsd&quot;&gt;
+  &lt;CfgCreate&gt;
+    &lt;CfgApplication id=&quot;CfgApplication1174&quot; name=&quot;Gromit&quot; type=&quot;22&quot; version=&quot;8.1&quot; state=&quot;1&quot; appPrototypeDBID=&quot;CfgAppPrototype202&quot; ownerDBID=&quot;CfgProviderTenant1&quot; folderDBID=&quot;CfgFolder2787&quot;&gt;
+      &lt;tenantDBIDs&gt;
+        &lt;CfgAppTenant linkDBID=&quot;CfgTenant101&quot;/&gt;
+      &lt;/tenantDBIDs&gt;
+      &lt;options&gt;
+        &lt;list_pair key=&quot;properties&quot;&gt;
+          &lt;str_pair key=&quot;clws.url&quot; value=&quot;https://test.com&quot;/&gt;
+          &lt;str_pair key=&quot;logging.level&quot; value=&quot;DEBUG&quot;/&gt;
+        &lt;/list_pair&gt;
+      &lt;/options&gt;
+    &lt;/CfgApplication&gt;
+  &lt;/CfgCreate&gt;
+&lt;/CfgData&gt;
+
+ACTUAL:
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;CfgData xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.genesyslab.com/cs hta/cfg_update.xsd&quot;&gt;
+  &lt;CfgCreate&gt;
+    &lt;CfgApplication id=&quot;CfgApplication1174&quot; name=&quot;Gromit&quot; type=&quot;22&quot; version=&quot;8.1&quot; state=&quot;1&quot; appPrototypeDBID=&quot;CfgAppPrototype202&quot; ownerDBID=&quot;CfgProviderTenant1&quot; folderDBID=&quot;CfgFolder2787&quot;&gt;
+      &lt;tenantDBIDs&gt;
+        &lt;CfgAppTenant linkDBID=&quot;CfgTenant101&quot;/&gt;
+      &lt;/tenantDBIDs&gt;
+    &lt;/CfgApplication&gt;
+  &lt;/CfgCreate&gt;
+&lt;/CfgData&gt;
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>Generated by 
+<a href="http://www.gradle.org">Gradle 1.11</a> at 21-Mar-2014 10:45:56</p>
+</div>
+</div>
+</body>

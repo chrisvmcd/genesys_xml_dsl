@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
+  <CfgCreate>
+    <CfgApplication id="CfgApplication1174" name="D6_AIR" type="22" version="8.1" state="1" appPrototypeDBID="CfgAppPrototype202" ownerDBID="CfgProviderTenant1" folderDBID="CfgFolder2787">
+      <tenantDBIDs>
+        <CfgAppTenant linkDBID="CfgTenant101"/>
+      </tenantDBIDs>
+    </CfgApplication>
+  </CfgCreate>
+</CfgData>

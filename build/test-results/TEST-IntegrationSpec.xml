@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IntegrationSpec" tests="1" failures="1" errors="0" timestamp="2014-03-21T10:45:56" hostname="Chriss-MacBook-Pro.local" time="0.362">
+  <properties/>
+  <testcase name="should construct basic xml" classname="IntegrationSpec" time="0.362">
+    <failure message="Condition not satisfied:&#10;&#10;compareXml(expected, actual)&#10;|          |         |&#10;false      |         CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[CfgApplication[attributes={id=CfgApplication1174, name=Gromit, type=22, version=8.1, state=1, appPrototypeDBID=CfgAppPrototype202, ownerDBID=CfgProviderTenant1, folderDBID=CfgFolder2787}; value=[tenantDBIDs[attributes={}; value=[CfgAppTenant[attributes={linkDBID=CfgTenant101}; value=[]]]]]]]]]]&#10;           CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[CfgApplication[attributes={id=CfgApplication1174, name=Gromit, type=22, version=8.1, state=1, appPrototypeDBID=CfgAppPrototype202, ownerDBID=CfgProviderTenant1, folderDBID=CfgFolder2787}; value=[tenantDBIDs[attributes={}; value=[CfgAppTenant[attributes={linkDBID=CfgTenant101}; value=[]]]], options[attributes={}; value=[list_pair[attributes={key=properties}; value=[str_pair[attributes={key=clws.url, value=https://test.com}; value=[]], str_pair[attributes={key=logging.level, value=DEBUG}; value=[]]]]]]]]]]]]&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
+
+compareXml(expected, actual)
+|          |         |
+false      |         CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[CfgApplication[attributes={id=CfgApplication1174, name=Gromit, type=22, version=8.1, state=1, appPrototypeDBID=CfgAppPrototype202, ownerDBID=CfgProviderTenant1, folderDBID=CfgFolder2787}; value=[tenantDBIDs[attributes={}; value=[CfgAppTenant[attributes={linkDBID=CfgTenant101}; value=[]]]]]]]]]]
+           CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[CfgApplication[attributes={id=CfgApplication1174, name=Gromit, type=22, version=8.1, state=1, appPrototypeDBID=CfgAppPrototype202, ownerDBID=CfgProviderTenant1, folderDBID=CfgFolder2787}; value=[tenantDBIDs[attributes={}; value=[CfgAppTenant[attributes={linkDBID=CfgTenant101}; value=[]]]], options[attributes={}; value=[list_pair[attributes={key=properties}; value=[str_pair[attributes={key=clws.url, value=https://test.com}; value=[]], str_pair[attributes={key=logging.level, value=DEBUG}; value=[]]]]]]]]]]]]
+
+	at IntegrationSpec.should construct basic xml(IntegrationSpec.groovy:25)
+</failure>
+  </testcase>
+  <system-out><![CDATA[EXPECTED:
+<?xml version="1.0" encoding="UTF-8"?><CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
+  <CfgCreate>
+    <CfgApplication id="CfgApplication1174" name="Gromit" type="22" version="8.1" state="1" appPrototypeDBID="CfgAppPrototype202" ownerDBID="CfgProviderTenant1" folderDBID="CfgFolder2787">
+      <tenantDBIDs>
+        <CfgAppTenant linkDBID="CfgTenant101"/>
+      </tenantDBIDs>
+      <options>
+        <list_pair key="properties">
+          <str_pair key="clws.url" value="https://test.com"/>
+          <str_pair key="logging.level" value="DEBUG"/>
+        </list_pair>
+      </options>
+    </CfgApplication>
+  </CfgCreate>
+</CfgData>
+
+ACTUAL:
+<?xml version="1.0" encoding="UTF-8"?><CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
+  <CfgCreate>
+    <CfgApplication id="CfgApplication1174" name="Gromit" type="22" version="8.1" state="1" appPrototypeDBID="CfgAppPrototype202" ownerDBID="CfgProviderTenant1" folderDBID="CfgFolder2787">
+      <tenantDBIDs>
+        <CfgAppTenant linkDBID="CfgTenant101"/>
+      </tenantDBIDs>
+    </CfgApplication>
+  </CfgCreate>
+</CfgData>
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

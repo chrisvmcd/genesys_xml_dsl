@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ConfigurationDelegateSpec" tests="1" failures="0" errors="0" timestamp="2014-03-21T10:45:56" hostname="Chriss-MacBook-Pro.local" time="0.063">
+  <properties/>
+  <testcase name="should constuct root node" classname="ConfigurationDelegateSpec" time="0.063"/>
+  <system-out><![CDATA[CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[]]]]
+CfgData[attributes={{http://www.w3.org/2001/XMLSchema-instance}schemaLocation=http://www.genesyslab.com/cs hta/cfg_update.xsd}; value=[CfgCreate[attributes={}; value=[]]]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

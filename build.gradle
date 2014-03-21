@@ -1,0 +1,32 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+group = 'com.bskyb.ct'
+version = '0.0.1'
+
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.0'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '0.7-groovy-2.0'
+
+    testCompile 'xmlunit:xmlunit:1.1'
+
+//    testCompile "org.hamcrest:hamcrest-core:1.2"
+//    testRuntime "cglib:cglib-nodep:2.2"
+//    testRuntime "org.objenesis:objenesis:1.2"
+}
+
+sourceSets {
+    test {
+        output.resourcesDir = "src/test/resources"
+    }
+}
+
+task generate (dependsOn: 'classes', type: JavaExec) {
+    main = 'ConfigGenerator'
+    args = ['change.groovy']
+    classpath = sourceSets.main.runtimeClasspath
+}
