@@ -4,6 +4,12 @@
       <tenantDBIDs>
         <CfgAppTenant linkDBID="CfgTenant101"/>
       </tenantDBIDs>
+      <options>
+        <list_pair key="properties">
+          <str_pair key="clws.url" value="Dave"/>
+          <str_pair key="logging.level" value="DEBUG"/>
+        </list_pair>
+      </options>
     </CfgApplication>
   </CfgCreate>
 </CfgData>
