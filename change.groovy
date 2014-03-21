@@ -1,6 +1,6 @@
 configuration {
     create {
-        application name: "D6_AIR", {
+        application name: "Grommit", {
             options "clws.url":"Dave","logging.level":"DEBUG"
         }
     }
