@@ -3,6 +3,6 @@
                 appPrototypeDBID="ThirdPartyServer"
                 ownerDBID="Environment" folderDBID="AVSFolder">
     <tenantDBIDs>
-        <CfgAppTenant linkDBID="CfgTenant101"/>
+        <CfgAppTenant linkDBID="Resources"/>
     </tenantDBIDs>
 </CfgApplication>

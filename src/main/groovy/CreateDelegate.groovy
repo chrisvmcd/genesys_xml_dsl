@@ -1,13 +1,11 @@
 @Mixin(XmlMixin)
 class CreateDelegate {
 
-    private Node parent;
     private Node create;
 
     CreateDelegate(parent) {
-        this.parent = parent
         this.create = readNode("create")
-        this.parent.append(create)
+        parent.append(create)
     }
 
     void application(Map map) {

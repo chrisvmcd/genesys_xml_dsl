@@ -1,4 +1,3 @@
 <CfgReference>
        <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
-       <CfgTenantRef id="CfgTenant101" name="Resources"/>
 </CfgReference>

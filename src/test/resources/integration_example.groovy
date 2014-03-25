@@ -1,5 +1,6 @@
 configuration {
     reference {
+        tenant "id":"Resources", "name":"Resources"
         folder "id":"AFolder", "DBID":1234
     }
     create {

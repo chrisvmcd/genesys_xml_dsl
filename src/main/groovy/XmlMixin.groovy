@@ -1,7 +1,10 @@
 class XmlMixin {
 
     Node readNode(nodeName) {
-        new XmlParser().parseText(this.getClass().getResource('/' + nodeName + '.xml').text)
+        def resource = this.getClass().getResource('/' + nodeName + '.xml')
+        if(resource == null)
+            throw new IllegalStateException(String.format("Xml snippet %s.xml not found", nodeName));
+        new XmlParser().parseText(resource.text)
     }
 
     void mapAttributesToNode(map, node) {

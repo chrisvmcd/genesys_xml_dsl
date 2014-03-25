@@ -1,7 +1,8 @@
 @Mixin(XmlMixin)
 class ConfigurationDelegate {
     private root
-    ConfigurationDelegate(){
+
+    ConfigurationDelegate() {
         this.root = readNode("data")
     }
 
@@ -13,11 +14,13 @@ class ConfigurationDelegate {
         return this.root
     }
 
-    Node reference(Closure cl) {
-        cl.delegate = new ReferenceDelegate(this.root)
-        cl.resolveStrategy = Closure.DELEGATE_FIRST
+    Node methodMissing(String name, args) {
+        def closure = args[0]
 
-        cl()
+        closure.delegate = new DynamicDelegate(this.root, name)
+        closure.resolveStrategy = Closure.DELEGATE_FIRST
+
+        closure()
         return this.root
     }
 }

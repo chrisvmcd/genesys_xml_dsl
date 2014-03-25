@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
-
     <CfgReference>
         <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
         <CfgTenantRef id="Resources" name="Resources"/>
         <CfgAppPrototypeRef id="ThirdPartyServer" name="Third Party Server"/>
         <CfgFolderRef id="AVSFolder" DBID="2707"/>
     </CfgReference>
-
     <CfgCreate>
-        <CfgApplication id="CfgApplication1174" name="WD1IV12B_CUSTOMER_SEARCH"
-                        type="22" version="8.1" state="1"
-                        appPrototypeDBID="ThirdPartyServer" ownerDBID="Environment"
-                        folderDBID="AVSFolder">
+        <CfgApplication id="CfgApplication1174" name="WD1IV12B_CUSTOMER_SEARCH" type="22" version="8.1" state="1"
+                        appPrototypeDBID="ThirdPartyServer" ownerDBID="Environment" folderDBID="AVSFolder">
             <tenantDBIDs>
                 <CfgAppTenant linkDBID="Resources"/>
             </tenantDBIDs>

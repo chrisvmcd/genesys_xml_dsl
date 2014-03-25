@@ -3,7 +3,7 @@ import groovy.xml.XmlUtil
 class ConfigGenerator {
     static void main(String[] args) {
         def xml = generate(new GroovyShell().parse(new File(args[0])))
-        new File("change.xml").write(XmlUtil.serialize(xml))
+        new File(args[1]).write(XmlUtil.serialize(xml))
     }
 
     static Node generate(Script dslScript) {
@@ -32,5 +32,3 @@ class ConfigGenerator {
         return emc
     }
 }
-
-
