@@ -8,6 +8,7 @@ class XmlMixin {
     }
 
     void mapAttributesToNode(map, node) {
+       println String.format("mapping %s to %s", map.toString(), node)
         for (entry in map) {
             node.attributes().putAt(entry.key, map[entry.key])
         }

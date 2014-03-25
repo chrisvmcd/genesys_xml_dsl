@@ -8,13 +8,15 @@ class ConfigGenerator {
 
     static Node generate(Script dslScript) {
 
+        def node = new XmlMixin().readNode("data")
+
         dslScript.metaClass = createEMC(dslScript.class, {
             ExpandoMetaClass emc ->
 
                 emc.configuration = {
                     Closure cl ->
 
-                        cl.delegate = new ConfigurationDelegate()
+                        cl.delegate = new DynamicDelegate(node)
                         cl.resolveStrategy = Closure.DELEGATE_FIRST
 
                         cl()

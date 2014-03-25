@@ -1,0 +1,8 @@
+<xml>
+    <CfgReference>
+        <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
+        <CfgFolderRef>
+            <CfgTenantRef/>
+        </CfgFolderRef>
+    </CfgReference>
+</xml>

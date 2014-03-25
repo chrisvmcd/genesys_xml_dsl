@@ -1,26 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
-    <CfgReference>
-        <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
-        <CfgTenantRef id="Resources" name="Resources"/>
-        <CfgFolderRef id="AFolder" DBID="1234"/>
-    </CfgReference>
-    <CfgCreate>
-        <CfgApplication id="CfgApplication1174" name="WD1IV12B_CUSTOMER_SEARCH" type="22" version="8.1" state="1"
-                        appPrototypeDBID="ThirdPartyServer" ownerDBID="Environment" folderDBID="AVSFolder">
-            <tenantDBIDs>
-                <CfgAppTenant linkDBID="Resources"/>
-            </tenantDBIDs>
-            <options>
-                <list_pair key="properties">
-                    <str_pair key="logging.level" value="DEBUG"/>
-                    <str_pair key="lws.password" value="password"/>
-                    <str_pair key="lws.username" value="demo"/>
-                    <str_pair key="polling.interval.seconds" value="60"/>
-                    <str_pair key="test.mode" value="false"/>
-                </list_pair>
-            </options>
-        </CfgApplication>
-    </CfgCreate>
+<?xml version="1.0" encoding="UTF-8"?><CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
+  <CfgReference>
+    <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
+    <CfgFolderRef id="AFolder" DBID="1234"/>
+  </CfgReference>
+  <CfgCreate>
+    <CfgApplication id="CfgApplication1174" name="WD1IV12B_CUSTOMER_SEARCH" type="22" version="8.1" state="1" appPrototypeDBID="ThirdPartyServer" ownerDBID="Environment" folderDBID="AVSFolder">
+      <tenantDBIDs>
+        <CfgAppTenant linkDBID="Resources"/>
+      </tenantDBIDs>
+      <options>
+        <list_pair key="properties">
+          <str_pair key="logging.level" value="DEBUG"/>
+          <str_pair key="lws.password" value="password"/>
+          <str_pair key="lws.username" value="demo"/>
+          <str_pair key="polling.interval.seconds" value="60"/>
+          <str_pair key="test.mode" value="false"/>
+        </list_pair>
+      </options>
+    </CfgApplication>
+  </CfgCreate>
 </CfgData>
