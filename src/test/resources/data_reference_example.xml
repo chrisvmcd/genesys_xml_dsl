@@ -1,0 +1,7 @@
+<CfgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.genesyslab.com/cs hta/cfg_update.xsd">
+    <CfgReference>
+        <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
+        <CfgTenantRef id="CfgTenant101" name="Resources"/>
+    </CfgReference>
+</CfgData>

@@ -4,7 +4,7 @@
 
     <CfgReference>
         <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
-        <CfgTenantRef id="CfgTenant101" name="Resources"/>
+        <CfgTenantRef id="Resources" name="Resources"/>
         <CfgAppPrototypeRef id="ThirdPartyServer" name="Third Party Server"/>
         <CfgFolderRef id="AVSFolder" DBID="2707"/>
     </CfgReference>
@@ -15,7 +15,7 @@
                         appPrototypeDBID="ThirdPartyServer" ownerDBID="Environment"
                         folderDBID="AVSFolder">
             <tenantDBIDs>
-                <CfgAppTenant linkDBID="CfgTenant101"/>
+                <CfgAppTenant linkDBID="Resources"/>
             </tenantDBIDs>
             <options>
                 <list_pair key="properties">

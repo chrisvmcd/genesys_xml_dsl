@@ -12,4 +12,12 @@ class ConfigurationDelegate {
         cl()
         return this.root
     }
+
+    Node reference(Closure cl) {
+        cl.delegate = new ReferenceDelegate(this.root)
+        cl.resolveStrategy = Closure.DELEGATE_FIRST
+
+        cl()
+        return this.root
+    }
 }

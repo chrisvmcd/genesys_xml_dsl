@@ -1,7 +1,7 @@
 <CfgApplication id="CfgApplication1174" name="" type="22"
                 version="8.1" state="1"
-                appPrototypeDBID="CfgAppPrototype202"
-                ownerDBID="CfgProviderTenant1" folderDBID="CfgFolder2787">
+                appPrototypeDBID="ThirdPartyServer"
+                ownerDBID="Environment" folderDBID="AVSFolder">
     <tenantDBIDs>
         <CfgAppTenant linkDBID="CfgTenant101"/>
     </tenantDBIDs>

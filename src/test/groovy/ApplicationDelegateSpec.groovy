@@ -1,6 +1,6 @@
 import spock.lang.Specification
 
-@Mixin(XmlAssertions)
+@Mixin(XmlTestHelper)
 class ApplicationDelegateSpec extends Specification {
     def 'should add create node to root'() {
 

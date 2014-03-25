@@ -1,0 +1,17 @@
+<xml>
+    <CfgCreate>
+        <CfgApplication id="CfgApplication1174" name="Dave" type="22"
+                        version="8.1" state="1"
+                        appPrototypeDBID="ThirdPartyServer"
+                        ownerDBID="Environment" folderDBID="AVSFolder">
+            <tenantDBIDs>
+                <CfgAppTenant linkDBID="CfgTenant101"/>
+            </tenantDBIDs>
+            <options>
+                <list_pair key="properties">
+                    <str_pair key="test.mode" value="false"/>
+                </list_pair>
+            </options>
+        </CfgApplication>
+    </CfgCreate>
+</xml>

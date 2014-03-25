@@ -5,8 +5,7 @@
     <CfgReference>
         <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
         <CfgTenantRef id="CfgTenant101" name="Resources"/>
-        <CfgAppPrototypeRef id="ThirdPartyServer" name="Third Party Server"/>
-        <CfgFolderRef id="AVSFolder" DBID="2707"/>
+        <CfgFolderRef id="AFolder" DBID="1234"/>
     </CfgReference>
 
     <CfgCreate>
@@ -20,10 +19,7 @@
             <options>
                 <list_pair key="properties">
                     <str_pair key="logging.level" value="DEBUG"/>
-                    <str_pair key="lws.password" value="password"/>
-                    <str_pair key="lws.username" value="demo"/>
-                    <str_pair key="polling.interval.seconds" value="60"/>
-                    <str_pair key="test.mode" value="false"/>
+                    <str_pair key="clws.url" value="https://test.com"/>
                 </list_pair>
             </options>
         </CfgApplication>

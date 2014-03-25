@@ -27,9 +27,7 @@ class CreateDelegate {
 
     private Node createApplicationNode(Map map) {
         def application = readNode('application')
-        for (entry in map) {
-            application.attributes().putAt(entry.key, map[entry.key])
-        }
+        mapAttributesToNode(map, application)
         application
     }
 }
