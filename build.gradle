@@ -25,6 +25,6 @@ sourceSets {
 
 task generate (dependsOn: 'classes', type: JavaExec) {
     main = 'ConfigGenerator'
-    args = ['change.groovy', 'change.xml']
+    args = ['change.groovy', 'change.xml', false]
     classpath = sourceSets.main.runtimeClasspath
 }
