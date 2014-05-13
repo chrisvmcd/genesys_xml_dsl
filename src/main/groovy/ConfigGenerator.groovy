@@ -30,7 +30,7 @@ class ConfigGenerator {
     private static void validate(String xmlString) {
         def factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
         def schema = factory.newSchema(new StreamSource(
-                new StringReader(this.getClass().getResource('/genesys8.0.xsd').text)))
+                new StringReader(this.getClass().getResource('/xsd/cfg_update.xsd').text)))
         def validator = schema.newValidator()
         validator.validate(new StreamSource(
                 new StringReader(xmlString)))

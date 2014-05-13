@@ -1,0 +1,6 @@
+<xml>
+    <CfgReference>
+        <CfgProviderTenantRef id="Environment" name="Environment" allTenants="1"/>
+        <CfgFolderRef id="AVSFolder" DBID="ABCD"/>
+    </CfgReference>
+</xml>

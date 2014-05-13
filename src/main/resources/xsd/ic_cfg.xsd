@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<xs:schema id="Config" targetNamespace="http://tempuri.org/ic_cfg1.xsd" xmlns:mstns="http://tempuri.org/ic_cfg1.xsd" xmlns="http://tempuri.org/ic_cfg1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="Config" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="SwitchConn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="credentials" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="app_name" type="xs:string" minOccurs="1" />
+                    <xs:element name="app_id" type="xs:string" minOccurs="1" />
+                    <xs:element name="drv_name" type="xs:string" minOccurs="1" />
+                    <xs:element name="app_pass" nillable="true" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="app_pass_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="encrypted" form="unqualified" type="xs:boolean" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="transform_params" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="tenantDBID" form="unqualified" type="xs:string" />
+                  <xs:attribute name="tenantName" form="unqualified" type="xs:string" />
+                  <xs:attribute name="switchDBID" form="unqualified" type="xs:string" />
+                  <xs:attribute name="switchName" form="unqualified" type="xs:string" />
+                  <xs:attribute name="switchOfficeDBID" form="unqualified" type="xs:string" />
+                  <xs:attribute name="switchOfficeName" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="acdp_map" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="original" form="unqualified" type="xs:string" />
+                  <xs:attribute name="prepared" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="execute_requests" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="idref" form="unqualified" type="xs:string" />
+                  <xs:attribute name="merge_into" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="requests" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="request" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="rowset" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="select" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:attribute name="oai_str" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="map_to" form="unqualified" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="usetag" form="unqualified" type="xs:string" />
+                              <xs:attribute name="type" form="unqualified" type="xs:string" />
+                              <xs:attribute name="msg_id" form="unqualified" type="xs:string" />
+                              <xs:attribute name="attr" form="unqualified" type="xs:string" />
+                              <xs:attribute name="free_par" form="unqualified" type="xs:string" />
+                              <xs:attribute name="delayed_macrosubstitution" form="unqualified" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" form="unqualified" type="xs:string" />
+                        <xs:attribute name="xslt" form="unqualified" type="xs:string" />
+                        <xs:attribute name="xslt_out" form="unqualified" type="xs:string" />
+                        <xs:attribute name="postapply" form="unqualified" type="xs:string" />
+                        <xs:attribute name="xslt_instantly" form="unqualified" type="xs:string" />
+                        <xs:attribute name="depends_on" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ign_postapply_err" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="variables" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="var" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="name" form="unqualified" type="xs:string" />
+                        <xs:attribute name="type" form="unqualified" type="xs:string" />
+                        <xs:attribute name="lowerbound" form="unqualified" type="xs:string" />
+                        <xs:attribute name="upperbound" form="unqualified" type="xs:string" />
+                        <xs:attribute name="step" form="unqualified" type="xs:string" />
+                        <xs:attribute name="source" form="unqualified" type="xs:string" />
+                        <xs:attribute name="use_tag" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transformations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="template" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="params" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="export_agent_logins" form="unqualified" type="xs:string" />
+                        <xs:attribute name="export_agents" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="file" form="unqualified" type="xs:string" />
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

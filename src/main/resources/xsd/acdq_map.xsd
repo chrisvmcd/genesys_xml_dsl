@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<xs:schema id="NewDataSet" targetNamespace="http://tempuri.org/acdq_map.xsd" xmlns:mstns="http://tempuri.org/acdq_map.xsd" xmlns="http://tempuri.org/acdq_map.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="acdp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="range" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="lower" form="unqualified" type="xs:positiveInteger" />
+            <xs:attribute name="upper" form="unqualified" type="xs:positiveInteger" />
+            <xs:attribute name="cfg_type" form="unqualified" type="xs:positiveInteger" />
+            <xs:attribute name="comment" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enum" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="enumeration" form="unqualified" type="xs:string" />
+            <xs:attribute name="cfg_type" form="unqualified" type="xs:positiveInteger" />
+            <xs:attribute name="comment" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="cfg_type_default" form="unqualified" type="xs:positiveInteger" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="acdp" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

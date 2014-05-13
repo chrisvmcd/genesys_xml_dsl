@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xs:schema id="CfgElementKeys" 
+	targetNamespace="http://tempuri.org/switch_obj_match.xsd" 
+	xmlns:mstns="http://tempuri.org/cfg_switch_import.xsd" 
+	xmlns="http://tempuri.org/cfg_switch_import.xsd" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified">
+  <xs:element name="CfgElementKeys" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="CfgElem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="key" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" form="unqualified" type="xs:ID" use='required'/>
+                  <xs:attribute name="value" form="unqualified" type="xs:string" use='required'/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" form="unqualified" type="xs:ID" use='required'/>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

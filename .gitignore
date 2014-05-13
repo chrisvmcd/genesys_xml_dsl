@@ -1,6 +1,7 @@
 build/
 out/
 .idea/
+*.iml
 .gradle/
 .DS_Store
 .genesys_xml_dsl.iml
